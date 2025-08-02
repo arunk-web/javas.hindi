@@ -6,7 +6,6 @@
 
 console.log("arun"); console.log("kumar")  //ye shi hai but not a goood practise 
 console.log("arun")  // aise likhna haii for good practise
- console.log("kumar")
 console.log("kumar")
 
 
