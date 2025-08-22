@@ -133,6 +133,49 @@ console.log(Object.entries(tinderUser)); //[ [ 'id', '123abc' ], [ 'name', 'pagl
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));   //then it returns true
 
 
+//*****************************LEC-18 ************************/
+// API's....we are going to learn about de-structuring
+
+const course = {                //declare object
+    coursename : "js in hindi",
+    price : "999",
+    courseInstructor : "arun"
+}
+
+// use or print
+console.log(course.courseInstructor);   //esse keval ek value aayegi soo bhut likhna pdega sari values ko print krne ke liye agr bhut si values hui toh
+// then a new method came [by destructuring krke]
+const {courseInstructor} = course    //SYNTAX: const {jo value fetch krni haii} = object name (jisme value hai sb)
+const {courseInstructor : instructor} = course  //ab hm courseinstructor ko instructor bolenge......but value same ayegi.....now check by printing console.log(instuctor)
+console.log(instructor);   //print that value           
+
+
+
+// it has not any name like above objects so it behaves like "JSON"..In this both key and values are in string format
+//   it is form of json like object with no name
+// {
+//     "name" : "arun",
+//     "coursename" : "js in hindi",
+//     "price" : "free"
+// }
+
+// sometimes we got api in array format like,  (array of mutiple objects)
+[
+    {},
+    {},
+    {}
+]
+
+
+
+
+
+
+
+
+
+
+
 
 
 
