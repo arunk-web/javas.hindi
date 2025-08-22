@@ -43,16 +43,16 @@ console.log(JsUser1);
 
 // ADD FUNCTION IN OUR OBJECT
 
-// JsUser1.greeting = function(){
-//     console.log("Hello js user");
-// }
+JsUser1.greeting = function(){
+    console.log("Hello js user");
+}
 
-// JsUser1.greeting2 = function() {
-//     console.log(`Hello js user,${this.name}`);
-// }
+JsUser1.greeting2 = function() {
+    console.log(`Hello js user,${this.name}`);
+}
 
-// console.log(JsUser1.greeting());     //undefined
-// console.log(JsUser1.greeting2());    //Hello js user, Hitesh
+console.log(JsUser1.greeting());     //undefined
+console.log(JsUser1.greeting2());    //Hello js user, Hitesh
 
 
 // ****************//Lec-17\\ ************************//
