@@ -1,4 +1,2 @@
-hero2)
-// console.log(hero1)  //new array esme ek element ki trh behave kregi
-
-// console.log(hero1[
+1.greeting());     //undefined
+// console.log(JsUser1.greeting2());    //Hello js user, Hitesh
