@@ -73,6 +73,23 @@ const user = {    //es braket ke andr variable ko this se access krenge
 
         welcomemessage : function() {
             console.log(`${this.username},welcome to website`);
+            // console.log(this);
+            //ans:
+            /*
+            arun,welcome to website
+                    {
+                    username: 'arun',
+                    price: 999,
+                    welcomemessage: [Function: welcomemessage]
+                    }
+                    sam,welcome to website
+                    {
+                    username: 'sam',
+                    price: 999,
+                    welcomemessage: [Function: welcomemessage]
+                    }
+            */
+            
         }
 }
 //access
@@ -80,27 +97,71 @@ user.welcomemessage()   //arun,welcome to website
 user.username = "sam"   //value change kr di
 user.welcomemessage()   //sam,welcome to website
 
+// console.log(this); //empty object hai
+
+function chai(){
+    let username = "hitesh"
+    console.log(this.username);    //this object ke andr use kr skte hai naaa ki function ke andr 
+    console.log(this);   //ans: esse hme bhut sari values milengiiii 
+    
+}
+// chai()
+
+//arrow function ke through kaise define kre 
+const chai2 = () => {      //function name remove and add =>
+    let username = "hitesh"
+    console.log(this.username);   //ans : undefined
+    console.log(this);  //ans: {}
+}
+chai2()
+
+//arrow function syntax
+// () => {}
+//one way to define
+const addTwo = (num1,num2) => {
+    return num1+num2   //it is known as explicit return (use of return keyword)
+}
+
+console.log(addTwo(3,4));   //7
+//declare arrow in "ONE LINE"
+
+const addd = (num1,num2) => num1+num2   //this  or (num1+num2) //known as implicit return (no use of return keyword)
+//it is better to use () as (num1+num2) coz object esi trh return ho skte hai see below
+
+const addd2 = (num1,num2) => ({username : "arun"})   //it is neccessary to wrap it in ()
+
+console.log(addd2(1,2));  //it return object as  { username: 'arun' }
+
+
+//**********************************lec-24(IIFE)************************* */
+//immediately invoked function expressions
+
+(function chai(){  
+    //it is an named iifi coz it has its name chai
+    console.log("DB CONNECTED");      //DB CONNECTED
+    
+}) (); //but yha pr problem aa skti hai esliye pure function ko close kr do eske andr    ans print hoga
+
+// chai()  //access kr skte haiii
+//global scope ke pollution se problem hoti hai kayi baar bs usi pollution ko hatane ke liye iifi ka use kiya
+
+// write same thing using arrow function
+(  () => {
+    console.log("DB CONNECTED 2");   //DB CONNECTED 2 
+    
+}) (); // (BETTER TO USE SEMICOLON) agr yha semicoln nhi lga hoga toh niche wla func run krne pr error ayega
+
+//AGR NAME print krna hai 
+
+(  (username) => {     //ye simple IIFI hai kyuki eska koi name nhi hai
+    console.log(`DB CONNECTED 2 ${username}`);   //ans:DB CONNECTED 2 arun
+    
+}) ('arun');   //yha pr ye bracket function call ki trh act kr rha hai
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//*****************************lec-25***********************//
+// topic:  How does javascript execute code + call stack
 
 
 
