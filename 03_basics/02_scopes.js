@@ -158,7 +158,7 @@ console.log(addd2(1,2));  //it return object as  { username: 'arun' }
     
 }) ('arun');   //yha pr ye bracket function call ki trh act kr rha hai
 
-
+//   bnb
 
 //*****************************lec-25***********************//
 // topic:  How does javascript execute code + call stack
