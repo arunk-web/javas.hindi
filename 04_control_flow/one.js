@@ -47,7 +47,6 @@ else if(balance < 750){
 }
 else {
     console.log("less than 1200");
-    
 }
 
 
@@ -59,7 +58,6 @@ if(userloggedIn && debitcard){
 }
 
 // yha kuch or likhna hai abhi]]
-
 
 
 
