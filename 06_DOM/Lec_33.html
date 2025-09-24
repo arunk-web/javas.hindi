@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | lEC-33</title>
+</head>
+<body style="background-color : #212121 ; color : #fff">
+    <div class="parent">Monday</div>
+    <div class="parent">Tuesday</div>
+    <div class="parent">Wednesday</div>
+    <div class="parent">Thursday</div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')   //class ko dot ke saath likhte hai
+    console.log(parent);    //parent ke andr sari values mil jayengi hme
+    console.log(parent.children)
+    console.log(parent.children[1].innerHTML)   //ab hm index wise value track kr skte hai(bcoz array like element hai)   ..innerhtml se tuesday ayega
+
+    for(let i = 0 ; i < parent.children.length; i++){    //HTML collection pe loop lg jayega toh sare children ko print kr dungaa
+        console.log(parent.children[i].innerHTML);       //monday tuesday wednesday thursday  sb aise print hogaaa
+    }
+    //yha pr hmm parent se child tk ja rhe haiii.............
+
+    parent.children[1].style.color = "orange"      //color change kr diya
+    console.log(parent.firstElementChild);          //first child (monday)
+    console.log(parent.lastElementChild);           //last element child(thursday)
+
+    const dayOne = document.querySelector('.day')       //ab agr hm child se parent tk jaana chahe tohh
+    console.log(dayOne.parentElement)               //kevl dayone ka ans: monday
+    console.log(dayOne.nextElementSibling);         //tuesdayy
+
+    //important term "node"
+    console.log("NODES: ", parent.childNodes)    ///ans is 9
+
+
+
+</script>
+</html>
