@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec-36 events</title>
+</head>
+<body>
+      //lot of links of pictures here.....on which we have to add an event (for links see lec34)
+</body>
+<script>
+    //js is an sequencially run language....means jitne bhi events hote hai sb sequentially hi run hote haiii
+
+    //agr touch krne pr alert show krna hai tohh
+    //sbse phle wo element nikalo jispe lagana haiii
+    document.getElementById('owl').onclick = function(){
+        alert("owl clicked")    //so this is how it goes using function(but it is not a good method)
+    }
+
+    //best approach for the same
+    document.getElementById('owl').addEventListener('click', function(){
+        alert("owl clicked again")
+    })
+    
+    //types,timestamps,defaultPrevented
+    // target,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey,ctrlkey,shiftkey,keyCode
+
+    
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    },false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        // console.log("owl clicked");
+        e.preventDefault();
+        e.stopPropagation();    //event
+        console.log("google clicked");
+    },false)
+
+
+
+    //agr hm chahte hai kii image ko touch krne pr wo gayb ho jayeee
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e);       event dekhna ho toh esko run karaye
+        console.log(e.target.parentNode);
+
+        let removeIt = e.target.parentNode
+        // removeIt.remove();        1st method         //pura li remove krna haiii
+        removeIt.parentNode.removeChild(removeIt);      //2nd method to remove    (li se ul degaa)
+        //agr li pe click kr denge tohh pura ul gyb ho jayegaa  uske liye niche wala
+
+    },false)
+
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e);       event dekhna ho toh esko run karaye
+        console.log(e.target.tagName);
+
+
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+
+    },false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

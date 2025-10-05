@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec37</title>
+</head>
+<body>
+    <h1>chai or code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //first read about a function
+    //1 method
+    setTimeout(function(){
+        console.log("arun");   //2 sec ke baad arun print hoga(only one time)
+        
+    },2000)  //2 sec ka time diya gyaa
+
+    //2nd method
+    const sayArun = function(){
+        console.log("arun");
+    }
+    setTimeout(sayArun,2000) //give it handler and time
+    //simple: ye function kuch time baad changes krta hai 
+
+    //ab jo h1 me likha hai wo change krna hai
+
+    document.querySelector('h1').innerHTML = "best js series"    //h1 is changed
+
+    //we want to change that text after some time (say 2s) then what,
+
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML = "best js series"
+    }
+
+    //now call that function now and pass the handler and time
+    setTimeout(changeText,2000);
+
+    //ab agr mai es event ko rokna chahta hu toh ky kr skte hai[for this clearTimeout is used]
+
+    //dobara likha hai ye'
+    const changeMe = setTimeout(changeText,2000);
+    clearTimeout(changeMe)
+    //ye time se phle rok dega toh mai ye cheez button pe lagana chahta huu
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("stopped");
+        
+    })
+
+
+</script>
+</html>

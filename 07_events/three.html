@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>l37 2nd</title>
+</head>
+<body>
+    <h1>chai or javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //hme ek word print krna hai(1st method)
+    setInterval(function(){   //yha setinterval use kiya hai coz har second print kiyaa not only one time like "settimeout"
+        console.log("arun",Date.now()) //2nd parameter is for date which shows in number format
+    },1000)
+
+    //2nd way
+    const sayDate = function(str){
+        console.log(str,Date.now()) //2nd parameter is for date which shows in number format
+    }
+
+    setInterval(startTime,1000, "pass that string whcih we want to print")   //jo print krana hai usko pass kr skte ho otherwise upr ki trh bhi kr skte hai
+
+     
+</script>
+</html>
