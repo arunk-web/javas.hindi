@@ -6,7 +6,7 @@ const promiseOne = new Promise(function(resolve,reject){     //here promise is h
     setTimeout(function(){
         console.log('Async task is complete');   //1 sec ke baad ye print hoga
         resolve();   //esse promise consumed hoga[yha se niche value paas ho rhi hai]
-    },1000)
+    },1000)  
 })
 
 //promise consumption
@@ -100,7 +100,7 @@ async function consumePromiseFive(){
 consumePromiseFive();
 
 
-
+  
 
 
 
