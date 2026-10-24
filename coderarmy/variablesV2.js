@@ -1,3 +1,4 @@
+// video2
 // let var const 
 // const is used to declare a variable that cannot be reassigned. It creates a read-only reference to a value. However, if the value is an object or array, the contents of the object or array can still be modified.
 // let is used to declare a block-scoped variable that can be reassigned. It allows you to create variables that are limited in scope to the block, statement, or expression in which they are used.
@@ -86,5 +87,7 @@ let d = c
 d = 20
 console.log(c,d);   //ans : 10  //esme c ki value change nahi hui hai, iska reason ye hai ki primitives data types immutable hote hai, meaning unki values ko change nahi kiya ja sakta hai. lekin yaha pe humne d ko reassign kiya hai, isliye d ki value 20 ho gayi. 
 // c abhi bhi 10 ko point kr rha h lekin memroy me 20 abhi bhi h
+
+// primitive data type me ek copy bnti hai jaise purane data se kuch mtlb ni and woo new location bnega and uspe point krega and non primitive me referecne copy hota hai and esme changes ho skte haii
 
 
