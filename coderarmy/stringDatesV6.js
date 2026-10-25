@@ -104,15 +104,15 @@ console.log(now.getDate()) //today's date
 console.log(now.getFullYear())  //year
 
 // month starts from 0 like 0 for jan 1 for feb 2 for march and so on...
-console.log(now.getMonth())
+console.log(now.getMonth() )
 
 console.log(now.getHours())  //it gives us hour
 
 // want to create date by your own
-const nowdate = new Date(2025,8,20,8,25,16,125)
+const nowdate = new  Date(2025,8,20,8,25,16,125)
 // year month date hour min sec milisec
 
-console.log(nowdate)
+console.log( nowdate)
 
 const now1 = Date.now()
 // isse miliseconds me date ayegiii

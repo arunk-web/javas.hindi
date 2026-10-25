@@ -59,7 +59,7 @@ console.log(b);
 const obj = {
     name : "arun",
     age : 23,
-    isMarried : false,
+    isMarried :  false,
     address : "djnn"
 }
 
