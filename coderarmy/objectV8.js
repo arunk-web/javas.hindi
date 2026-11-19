@@ -97,7 +97,7 @@ console.log(val);
 const user = {
     name: "arun",
     age:20,
-    amount: 100022582,
+    amount:  100022582,
     address:{
         city :"ftp",
         state:"UP"
